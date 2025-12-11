@@ -23,13 +23,12 @@ jobs:
           sudo apt-get install -y maven
           mvn -version
 
-      - name: Build with Maven
-        run: mvn clean package 
-
-          # Copy WAR file to EC2
+      - name: Build and Deploy
+        run: |
+          mvn clean package
           cp target/*.war /opt/apache-tomcat-11.0.15/webapps
-
-          # Restart Tomcat
           sudo /opt/apache-tomcat-11.0.15/bin/shutdown.sh || true
           sudo /opt/apache-tomcat-11.0.15/bin/startup.sh
+
+         
 
