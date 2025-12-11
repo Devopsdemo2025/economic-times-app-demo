@@ -1,6 +1,6 @@
 name: Build & Deploy Economic Times App
 
-on:
+on: 
   push:
     branches:
       - main
