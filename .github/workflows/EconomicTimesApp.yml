@@ -37,9 +37,9 @@ jobs:
         run: |
           jfrog config add artifactory-server \
           --url ${{ secrets.ARTIFACTORY_URL }} \
-          --user ${{ secrets.ARTIFACTORY_USERNAME }} \
-          --password ${{ secrets.ARTIFACTORY_PASSWORD }} \
+          --access-token ${{ secrets.ARTIFACTORY_TOKEN }} \
           --interactive=false
+
 
 
       - name: Upload WAR to JFrog
