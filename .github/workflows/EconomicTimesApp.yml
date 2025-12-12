@@ -40,13 +40,10 @@ jobs:
            --access-token "${{ secrets.JFROG_TOKEN }}" \
            --interactive=false
 
-
-
-
       - name: Upload WAR to JFrog
         run: |
-          jfrog rt upload "target/*.war" "economicTimes/com/economic-times/"
-
+          TIMESTAMP=$(date +%Y%m%d%H%M%S)
+          jfrog rt upload "target/*.war" "economicTimes/com/economic-times/${TIMESTAMP}/"
 
           echo "Copying WAR to Tomcat..."
           sudo cp target/*.war /opt/apache-tomcat-11.0.15/webapps
