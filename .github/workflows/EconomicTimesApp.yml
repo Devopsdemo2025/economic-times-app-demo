@@ -35,10 +35,11 @@ jobs:
 
       - name: Configure JFrog CLI
         run: |
-          jfrog config add artifactory-server \
-          --url ${{ secrets.ARTIFACTORY_URL }} \
-          --access-token ${{ secrets.ARTIFACTORY_TOKEN }} \
-          --interactive=false
+           jfrog config edit artifactory-server \
+           --url "https://trialyth1ui.jfrog.io" \
+           --access-token "${{ secrets.JFROG_TOKEN }}" \
+           --interactive=false
+
 
 
 
