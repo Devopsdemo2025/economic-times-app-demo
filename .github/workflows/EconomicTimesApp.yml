@@ -37,9 +37,9 @@ jobs:
       - name: Configure JFrog CLI
         run: |
           jfrog config add artifactory-server \
-            --url ${{ secrets.JFROG_URL }} \
-            --user ${{ secrets.JFROG_USERNAME }} \
-            --password ${{ secrets.JFROG_PASSWORD }} \
+            --url ${{ MY_SECRETE.JFROG_URL }} \
+            --user ${{ MY_SECRETE.JFROG_USERNAME }} \
+            --password ${{ MY_SECRETE.JFROG_PASSWORD }} \
             --interactive=false
 
       - name: Upload WAR to JFrog
