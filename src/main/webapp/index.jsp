@@ -3,7 +3,7 @@
     <title>Economic Times News</title>
 </head>
 <body>
-<h1>Welcome to Economic Times App- 14-12-2025 at 04:18 PM</h1>
+<h1>Welcome to Economic Times App- 14-12-2025 at 04:40 PM</h1>
 <p><a href="news">View Live Top Headlines</a></p>
 </body>
 </html> 
